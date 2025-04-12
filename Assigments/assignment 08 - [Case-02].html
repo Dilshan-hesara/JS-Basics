@@ -16,6 +16,7 @@
             display: inline-block;
             border-radius: 10px;
 
+
         }
 
 
@@ -49,7 +50,22 @@
 
 <script src="../assent/lib/jquery-3.7.1.min.js"></script>
 
+<script>
+    let colors = ["red", "lightpink", "blue", "yellow", "white", "purple"];
+    const boxes=document.querySelectorAll(".b")
 
+    const x = () => {
+        let last = colors.pop();
+        colors.unshift(last);
+
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].style.backgroundColor=colors[i]
+        }
+    }
+    setInterval(x );
+
+
+</script>
 
 </body>
 </html>
