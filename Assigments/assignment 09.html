@@ -64,12 +64,21 @@
 <script>
 
 
+    let currentIndex = 0;
+    let direction = 1;
+    const divs = document.querySelectorAll("section > div");
+
+
     function knightRiderEffect() {
+        divs.forEach(div => div.style.backgroundColor = "#ddd");
+        divs[currentIndex].style.backgroundColor = "red";
 
+        currentIndex += direction;
 
+     
     }
 
-    setInterval(knightRiderEffect);
+    setInterval(knightRiderEffect, 100);
 
 
 </script>
