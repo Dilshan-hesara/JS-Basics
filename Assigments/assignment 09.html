@@ -75,7 +75,9 @@
 
         currentIndex += direction;
 
-     
+        if (currentIndex === divs.length - 1 || currentIndex === 0) {
+            direction *= -1;
+        }
     }
 
     setInterval(knightRiderEffect, 100);
